@@ -1,3 +1,5 @@
+
+// This is just a helper function to map through the Object
 function mapValues(obj, fn) {
   return Object.keys(obj).reduce((result, key) => {
     result[key] = fn(obj[key], key);

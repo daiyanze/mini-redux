@@ -1,4 +1,6 @@
 
+// Combine the functions
+// a(b(c())) => compose(a, b, c)
 function compose(...funcs) {
   return funcs.reduceRight((composed, f) => f(composed));
 }

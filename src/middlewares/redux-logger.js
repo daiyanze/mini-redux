@@ -3,9 +3,7 @@
 export default function logger({ getState }) {
   return next => action => {
     console.log("======== Redux Logger ========");
-
     console.log("Action Type: ", action.type);
-
     const prevState = getState();
     console.log("Prev: ", prevState);
 
