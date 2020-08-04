@@ -12,7 +12,7 @@ function addMinusReducer(state = 0, action) {
   }
 }
 
-function MultiplyDivideReducer (state = 2, action) {
+function multiplyDivideReducer (state = 2, action) {
   switch (action.type) {
     case "MULTIPLY":
       return state * 2;
@@ -26,7 +26,7 @@ function MultiplyDivideReducer (state = 2, action) {
 const store = createStore(
   combineReducers({
     count: addMinusReducer,
-    double: MultiplyDivideReducer
+    double: multiplyDivideReducer
   }),
   applyMiddleware(thunk, logger)
 );
